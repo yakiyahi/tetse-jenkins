@@ -4,6 +4,6 @@
   become: true
   tasks:
   - name: verification du repertoire du travail
-    cmd: pwd
+    shell: pwd
  
    
