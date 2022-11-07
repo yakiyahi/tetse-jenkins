@@ -9,4 +9,18 @@
     copy:
       src: /var/lib/jenkins/workspace/ansible-tp
       dest: /opt
+
+  - name: pull from git
+    git:
+      repo: https://yakiyahi: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@github.com/yakiyahi/tetse-jenkins.git
+      dest: /opt/
+      update: yes
+      version: main  
+  - name: suppression du cle ssh
+    file:
+      path: /opt/ansible-tp/ssh*
+      state: absent
+
+
+
    
