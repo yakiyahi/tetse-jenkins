@@ -3,8 +3,7 @@
   hosts: servers
   become: true
   tasks:
-  - name: copie du projet vers le serveur de test
-    copy: 
-      src: . 
-      dest: /data 
+  - name: verification du repertoire du travail
+    cmd: pwd
+ 
    
