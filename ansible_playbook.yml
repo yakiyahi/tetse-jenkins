@@ -1,2 +1,10 @@
 ---
-  - name: deployement avec ansible
+- name: deployement python
+  hosts: servers
+  become: true
+  tasks:
+  - name: copie du projet vers le serveur de test
+  copy: 
+    src: . 
+    dest: /data 
+   
