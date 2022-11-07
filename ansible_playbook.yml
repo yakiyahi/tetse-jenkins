@@ -2,8 +2,11 @@
 - name: deployement python
   hosts: servers
   become: true
+  vars:
+    workspace: "ansible-tp" 
   tasks:
-  - name: verification du repertoire du travail
-    shell: pwd
- 
+  - name: deployment
+    copy:
+      src: /var/lib/jenkins/workspace/ansible-tp
+      dest: /opt
    
